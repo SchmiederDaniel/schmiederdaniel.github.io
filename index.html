@@ -1,42 +1,97 @@
+<!DOCTYPE html>
 <html>
-<header>
+
+<head>
     <title>Project Overview - Daniel Schmieder</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <style>
         * {
-            margin: 0;
-            padding: 0;
-            font: bolder 25px Arial;
+            font-family: "Roboto", serif;
+            font-weight: 400;
+            font-style: normal;
             color: white;
         }
 
-        p {
+        html {
+            background-color: black;
+        }
+
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            font-size: 1.4em;
+        }
+
+        body {
+            background-image: linear-gradient(30deg, #fa0d0d30, #ffbd1660, #15e72ab0, #23d5abb0, #1673de70, #8416de30);
+            background-repeat: repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            animation: bodyStart 1s forwards 0.25s;
+        }
+
+        @keyframes bodyStart {
+            0% {
+                background-size: 300% 300%;
+            }
+
+            100% {
+                background-size: 100% 100%;
+            }
+        }
+
+        .container {
+            background-color: rgba(60, 60, 60, 0.1);
+            box-shadow: 0 0 30px 4px black;
+            backdrop-filter: blur(4px);
+            padding: 40px;
+            border-radius: 15px;
             text-align: center;
         }
 
-        div {
-            width: 600px;
-            height: 100%;
+        h1 {
+            margin: 0 0 20px 0;
+            font-weight: bolder;
+            filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.4));
+        }
 
-            margin: 0 auto;
-
-            background-color: rgb(29, 29, 64);
-            box-shadow: 0 0 35px 6px rgb(0, 0, 0);
-
-            white-space: pre-line;
+        .projects {
+            display: flex;
+            flex-direction: column;
         }
 
         a {
+            text-align: center;
             margin: 15px;
+            padding: 15px 30px;
+            background-color: rgba(30, 30, 30, 0.3);
+            box-shadow: 0 0 15px 4px black;
+            border-radius: 15px;
+            text-decoration:none;
+        }
+
+        a:hover {
+            background-color: rgba(0, 0, 0, 0.5);
         }
     </style>
-</header>
+</head>
 
 <body>
-    <div>
-        <p>My Projects:</p>
-        - <a href="https://schmiederdaniel.github.io/JSMindmap/">JSMindmap</a>
-        - <a href="https://schmiederdaniel.github.io/JSMultiLayerPerceptron/">JSMultiLayerPerceptron</a>
-        - <a href="https://schmiederdaniel.github.io/SQLite-Visualizer/">SQLite-Visualizer</a>
+    <div class="container">
+        <h1>My Projects</h1>
+        <div class="projects">
+            <a href="https://schmiederdaniel.github.io/SQLite-WebUI/">SQLite-WebUI</a>
+            <a href="https://schmiederdaniel.github.io/JSMindmap/">JSMindmap</a>
+            <a href="https://schmiederdaniel.github.io/JSMultiLayerPerceptron/">JSMultiLayerPerceptron</a>
+            <a href="https://schmiederdaniel.github.io/SQLite-Visualizer/">SQLite-Visualizer</a>
+        </div>
     </div>
 </body>
 
