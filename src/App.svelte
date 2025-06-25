@@ -9,6 +9,7 @@
     } from "flowbite-svelte-icons"
     import VerticalLine from "./VerticalLine.svelte";
     import {DarkMode} from "flowbite-svelte";
+    import HorizontalLine from "./HorizontalLine.svelte";
 
     const links = [
         {
@@ -46,6 +47,7 @@
     <div class="p-8 items-center flex justify-center flex-wrap gap-4">
         <Card class="max-w-min p-4">
             <Heading class="whitespace-nowrap text-2xl md:text-4xl lg:text-5xl">Projects Overview</Heading>
+            <HorizontalLine />
             <P class="mt-4 mb-4 text-lg sm:px-8 dark:text-gray-300">
                 A collection of some of my projects
                 which are hosted with Github.io Pages.
