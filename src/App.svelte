@@ -39,7 +39,7 @@
     }
 </script>
 <main class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors">
-    <Navbar class="px-8 bg-green-600 dark:bg-green-700">
+    <Navbar class="px-8 bg-green-600 dark:bg-green-700 shadow-md">
         <div class="w-full flex justify-end">
             <DarkMode class="bg-white hover:bg-gray-200 dark:hover:bg-gray-200"/>
         </div>
