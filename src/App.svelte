@@ -1,6 +1,6 @@
 <script>
     import {Navbar} from "flowbite-svelte";
-    import {Heading, Card, P, A, Mark, Secondary} from "flowbite-svelte";
+    import {Heading, Card, P} from "flowbite-svelte";
     import {
         CameraPhotoOutline,
         KeyboardOutline,
