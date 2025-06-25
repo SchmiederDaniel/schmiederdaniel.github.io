@@ -55,7 +55,7 @@
                 which are hosted with Github.io Pages.
             </P>
             <P class="mt-4 mb-4 text-lg sm:px-8 dark:text-gray-300">
-                Feel free to try them out, fork them or make pull requests.
+                Feel free to try them out.
             </P>
         </Card>
         <div class="flex flex-col items-center">
