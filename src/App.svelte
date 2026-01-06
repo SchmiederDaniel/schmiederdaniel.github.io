@@ -1,38 +1,20 @@
 <script>
     import {Navbar} from "flowbite-svelte";
     import {Heading, Card, P} from "flowbite-svelte";
-    import {
-        CameraPhotoOutline,
-        KeyboardOutline,
-        LightbulbOutline,
-        PersonChalkboardOutline
-    } from "flowbite-svelte-icons"
     import VerticalLine from "./VerticalLine.svelte";
     import {DarkMode} from "flowbite-svelte";
     import HorizontalLine from "./HorizontalLine.svelte";
+    import pages from "./pages.svelte";
+    import {_, addMessages, init, getLocaleFromNavigator} from 'svelte-i18n';
+    import en from "./locale/en.json";
+    import de from "./locale/de.json";
 
-    const links = [
-        {
-            icon: KeyboardOutline,
-            text: "SQLite-WebUI",
-            link: "./SQLite-WebUI/"
-        },
-        {
-            icon: LightbulbOutline,
-            text: "JSMindmap",
-            link: "./JSMindmap/"
-        },
-        {
-            icon: PersonChalkboardOutline,
-            text: "JSMultiLayerPerceptron",
-            link: "./JSMultiLayerPerceptron"
-        },
-        {
-            icon: CameraPhotoOutline,
-            text: "FFmpegWebUI",
-            link: "./FFmpegWebUI/"
-        }
-    ]
+    addMessages('en', en);
+    addMessages('de', de);
+    init({
+        fallbackLocale: 'en',
+        initialLocale: getLocaleFromNavigator(),
+    });
 
     function openLink(link) {
         window.open(link, "_self");
@@ -47,19 +29,15 @@
     <div class="p-8 items-center flex justify-center flex-wrap gap-4">
         <Card class="max-w-min p-4">
             <Heading class="whitespace-nowrap text-2xl md:text-4xl lg:text-5xl">
-                Projects Overview
+                {@html $_('title')}
             </Heading>
             <HorizontalLine/>
             <P class="mt-4 mb-4 text-lg sm:px-8 dark:text-gray-300">
-                A collection of some of my projects
-                which are hosted with Github.io Pages.
-            </P>
-            <P class="mt-4 mb-4 text-lg sm:px-8 dark:text-gray-300">
-                Feel free to try them out.
+                {@html $_('description')}
             </P>
         </Card>
         <div class="flex flex-col items-center">
-            {#each links as obj}
+            {#each pages as obj}
                 {@const Icon = obj.icon}
                 {@const link = obj.link}
                 <button on:click={() => openLink(link)}
@@ -72,6 +50,9 @@
                     <Icon/>
                     <VerticalLine/>
                     {obj.text}
+                    {#if obj.old}
+                        ({$_('old')})
+                    {/if}
                 </button>
             {/each}
         </div>
