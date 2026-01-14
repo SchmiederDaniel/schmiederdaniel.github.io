@@ -2,6 +2,16 @@ import {CameraPhotoOutline, KeyboardOutline, LightbulbOutline, PersonChalkboardO
 
 export default [
     {
+        icon: PersonChalkboardOutline,
+        text: "NeuralNetwork",
+        link: "./NeuralNetwork/"
+    },
+    {
+        icon: CameraPhotoOutline,
+        text: "FFmpegWebUI",
+        link: "./FFmpegWebUI/"
+    },
+    {
         icon: KeyboardOutline,
         text: "SQLite-WebUI",
         link: "./SQLite-WebUI/"
@@ -17,14 +27,4 @@ export default [
         link: "./JSMultiLayerPerceptron",
         old: true,
     },
-    {
-        icon: PersonChalkboardOutline,
-        text: "NeuralNetwork",
-        link: "./NeuralNetwork/"
-    },
-    {
-        icon: CameraPhotoOutline,
-        text: "FFmpegWebUI",
-        link: "./FFmpegWebUI/"
-    }
 ];
